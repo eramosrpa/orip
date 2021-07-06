@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1439,13288" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1439,14281" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
       <x:String>System.Activities</x:String>
@@ -48,7 +48,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -83,9 +83,10 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1449,13223" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap:VirtualizedContainerService.HintSize="1449,14216" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="contador" />
       <Variable x:TypeArguments="x:String" Name="nProceso" />
@@ -95,17 +96,18 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="1407,13131" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="http://190.145.190.151:7010/Portal/EstadoTramiteCiud/">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="1407,14124" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="http://190.145.190.151:7010/Portal/EstadoTramiteCiud/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1373,13030" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1373,14023" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="hora" />
               <Variable x:TypeArguments="x:String" Name="ruta" />
               <Variable x:TypeArguments="x:String" Name="hora2" />
+              <Variable x:TypeArguments="x:String" Name="ruta2" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -158,14 +160,23 @@
                 <InArgument x:TypeArguments="x:String">C:\Users\jparra\OneDrive\RPA\ORIP\</InArgument>
               </Assign.Value>
             </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="1331,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[ruta2]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">C:\Users\jparra\Documents\ORIPCOPIAEXCEL\</InArgument>
+              </Assign.Value>
+            </Assign>
             <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1331,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1331,12319" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="C:\Users\jparra\OneDrive\RPA\ORIP\INFORMACION.xlsx">
+            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[ruta2]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="1331,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False" Path="[ruta+&quot;INFORMACION.xlsx&quot;]" />
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1331,13015" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[ruta2+&quot;INFORMACION.xlsx&quot;]">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1297,12210" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1297,12906" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="datatable" />
                       <Variable x:TypeArguments="x:String" Name="CIUDAD" />
@@ -262,7 +273,7 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="695,565" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="695,563" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="orip" />
                                       <Variable x:TypeArguments="x:String" Name="ciudadSelect" />
@@ -280,7 +291,7 @@
                                         <InArgument x:TypeArguments="x:String">[CIUDAD]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <If Condition="[orip.Equals(item.ToString)]" sap:VirtualizedContainerService.HintSize="653,373" sap2010:WorkflowViewState.IdRef="If_8">
+                                    <If Condition="[orip.Equals(item.ToString)]" sap:VirtualizedContainerService.HintSize="653,371" sap2010:WorkflowViewState.IdRef="If_8">
                                       <If.Then>
                                         <Sequence sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -929,7 +940,7 @@
                       </ui:ForEachRow.Body>
                     </ui:ForEachRow>
                     <ui:ExcelWriteRange AddHeaders="True" DataTable="[datatable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="1255,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_4" SheetName="Hoja1" StartingCell="A1" />
-                    <Sequence sap:VirtualizedContainerService.HintSize="1255,5795" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <Sequence sap:VirtualizedContainerService.HintSize="1255,6491" sap2010:WorkflowViewState.IdRef="Sequence_17">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd:DataTable" Name="dtCancelacionHipoteca" />
                         <Variable x:TypeArguments="sd:DataTable" Name="dtOperacionesJuridicas" />
@@ -939,6 +950,8 @@
                         <Variable x:TypeArguments="sd:DataTable" Name="dtCorreo" />
                         <Variable x:TypeArguments="x:String" Name="tituloCorreo" />
                         <Variable x:TypeArguments="x:String" Name="cuerpoCorreo" />
+                        <Variable x:TypeArguments="x:String" Name="emailcorreo" />
+                        <Variable x:TypeArguments="x:String" Name="passwordcorreo" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1072,7 +1085,7 @@
                           </scg:List>
                         </ui:FilterDataTable.SelectColumns>
                       </ui:FilterDataTable>
-                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="631,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="631,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
@@ -1091,10 +1104,26 @@
                                 <InArgument x:TypeArguments="x:String">Se envia lalala</InArgument>
                               </ui:AssignOperation.Value>
                             </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[emailcorreo]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">eramos@tessi.co</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[passwordcorreo]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">Tessi2021*</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
                           </scg:List>
                         </ui:MultipleAssign.AssignOperations>
                       </ui:MultipleAssign>
-                      <If Condition="[dtFinalizados.Rows.Count=0]" DisplayName="If FINALIZADOS" sap:VirtualizedContainerService.HintSize="631,807" sap2010:WorkflowViewState.IdRef="If_11">
+                      <If Condition="[dtFinalizados.Rows.Count=0]" DisplayName="If FINALIZADOS" sap:VirtualizedContainerService.HintSize="631,1244" sap2010:WorkflowViewState.IdRef="If_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1102,7 +1131,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="486,650" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <Sequence sap:VirtualizedContainerService.HintSize="486,1087" sap2010:WorkflowViewState.IdRef="Sequence_18">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="sd:DataTable" Name="dtCorreoFinalizado" />
                             </Sequence.Variables>
@@ -1138,7 +1167,7 @@
                                 </scg:List>
                               </uascw:CompressFiles.ContentToArchive>
                             </uascw:CompressFiles>
-                            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtCorreoFinalizado]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="444,51" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtCorreoFinalizado]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="444,488" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
@@ -1158,7 +1187,7 @@
                                         <OutArgument x:TypeArguments="x:String">[nombreCorreoFin]</OutArgument>
                                       </ui:GetRowItem.Value>
                                     </ui:GetRowItem>
-                                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[cuerpoCorreo]" DisplayName="Send SMTP Mail Message" Email="eramos@tessi.co" EnableSSL="True" From="eramos@tessi.co" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="Eduard Ramos" Password="Tessi2021*" Port="587" SecureConnection="Auto" Server="smtp.live.com" Subject="[tituloCorreo]" To="[nombreCorreoFin]">
+                                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[cuerpoCorreo]" DisplayName="Send SMTP Mail Message" Email="[emailcorreo]" EnableSSL="True" From="[emailcorreo]" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="RPA TESSI ORIP" Password="[passwordcorreo]" Port="587" SecureConnection="Auto" Server="smtp.live.com" Subject="[tituloCorreo]" To="[nombreCorreoFin]">
                                       <ui:SendMail.Files>
                                         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                           <InArgument x:TypeArguments="x:String">[ruta+"Capturas\"+hora+"\"+hora2+"\"+"FINALIZADOS"+"\"+"FINALIZADOS"+".zip"]</InArgument>
@@ -1170,7 +1199,7 @@
                               </ui:ForEachRow.Body>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -1243,12 +1272,10 @@
                                         <OutArgument x:TypeArguments="x:String">[nombreCorreoHipoteca]</OutArgument>
                                       </ui:GetRowItem.Value>
                                     </ui:GetRowItem>
-                                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[cuerpoCorreo]" DisplayName="Send SMTP Mail Message" Email="eramos@tessi.co" EnableSSL="True" From="eramos@tessi.co" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_3" IsBodyHtml="False" Name="Eduard Ramos" Password="Tessi2021*" Port="587" SecureConnection="Auto" Server="smtp.live.com" Subject="[tituloCorreo]" To="[nombreCorreoHipoteca]">
+                                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[cuerpoCorreo]" DisplayName="Send SMTP Mail Message" Email="[emailcorreo]" EnableSSL="True" From="[emailcorreo]" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_3" IsBodyHtml="False" Name="RPA TESSI ORIP" Password="[passwordcorreo]" Port="587" SecureConnection="Auto" Server="smtp.live.com" Subject="[tituloCorreo]" To="[nombreCorreoHipoteca]">
                                       <ui:SendMail.Files>
                                         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                          <InArgument x:TypeArguments="x:String">
-                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ruta+&quot;Capturas\&quot;+hora+&quot;\&quot;+hora2+&quot;\&quot;+&quot;CANCELACIÓN DE HIPOTECA&quot;+&quot;\&quot;+&quot;CANCELACIÓN DE HIPOTECA&quot;+&quot;.zip&quot;" />
-                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:String">[ruta+"Capturas\"+hora+"\"+hora2+"\"+"CANCELACIÓN DE HIPOTECA"+"\"+"CANCELACIÓN DE HIPOTECA"+".zip"]</InArgument>
                                         </scg:List>
                                       </ui:SendMail.Files>
                                     </ui:SendMail>
@@ -1331,12 +1358,10 @@
                                         <OutArgument x:TypeArguments="x:String">[nombreCorreoOperaciones]</OutArgument>
                                       </ui:GetRowItem.Value>
                                     </ui:GetRowItem>
-                                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[cuerpoCorreo]" DisplayName="Send SMTP Mail Message" Email="eramos@tessi.co" EnableSSL="True" From="eramos@tessi.co" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_4" IsBodyHtml="False" Name="Eduard Ramos" Password="Tessi2021*" Port="587" SecureConnection="Auto" Server="smtp.live.com" Subject="[tituloCorreo]" To="[nombreCorreoOperaciones]">
+                                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[cuerpoCorreo]" DisplayName="Send SMTP Mail Message" Email="[emailcorreo]" EnableSSL="True" From="[emailcorreo]" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_4" IsBodyHtml="False" Name="RPA TESSI ORIP" Password="[passwordcorreo]" Port="587" SecureConnection="Auto" Server="smtp.live.com" Subject="[tituloCorreo]" To="[nombreCorreoOperaciones]">
                                       <ui:SendMail.Files>
                                         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                          <InArgument x:TypeArguments="x:String">
-                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ruta+&quot;Capturas\&quot;+hora+&quot;\&quot;+hora2+&quot;\&quot;+&quot;OPERACIONES JURIDICAS&quot;+&quot;\&quot;+&quot;OPERACIONES JURIDICAS&quot;+&quot;.zip&quot;" />
-                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:String">[ruta+"Capturas\"+hora+"\"+hora2+"\"+"OPERACIONES JURIDICAS"+"\"+"OPERACIONES JURIDICAS"+".zip"]</InArgument>
                                         </scg:List>
                                       </ui:SendMail.Files>
                                     </ui:SendMail>
@@ -1420,12 +1445,10 @@
                                         <OutArgument x:TypeArguments="x:String">[nombrecorreoCartera]</OutArgument>
                                       </ui:GetRowItem.Value>
                                     </ui:GetRowItem>
-                                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[cuerpoCorreo]" DisplayName="Send SMTP Mail Message" Email="eramos@tessi.co" EnableSSL="True" From="eramos@tessi.co" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_5" IsBodyHtml="False" Name="Eduard Ramos" Password="Tessi2021*" Port="587" SecureConnection="Auto" Server="smtp.live.com" Subject="[tituloCorreo]" To="[nombrecorreoCartera]">
+                                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[cuerpoCorreo]" DisplayName="Send SMTP Mail Message" Email="[emailcorreo]" EnableSSL="True" From="[emailcorreo]" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_5" IsBodyHtml="False" Name="RPA TESSI ORIP" Password="[passwordcorreo]" Port="587" SecureConnection="Auto" Server="smtp.live.com" Subject="[tituloCorreo]" To="[nombrecorreoCartera]">
                                       <ui:SendMail.Files>
                                         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                          <InArgument x:TypeArguments="x:String">
-                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ruta+&quot;Capturas\&quot;+hora+&quot;\&quot;+hora2+&quot;\&quot;+&quot;COMPRA CARTERA&quot;+&quot;\&quot;+&quot;COMPRA CARTERA&quot;+&quot;.zip&quot;" />
-                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:String">[ruta+"Capturas\"+hora+"\"+hora2+"\"+"COMPRA CARTERA"+"\"+"COMPRA CARTERA"+".zip"]</InArgument>
                                         </scg:List>
                                       </ui:SendMail.Files>
                                     </ui:SendMail>
@@ -1493,6 +1516,7 @@
                           </Sequence>
                         </If.Else>
                       </If>
+                      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[ruta+&quot;Capturas\&quot;+hora+&quot;\&quot;+hora2]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="631,157" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[ruta2+&quot;INFORMACION.xlsx&quot;]" />
                     </Sequence>
                   </Sequence>
                 </ActivityAction>
