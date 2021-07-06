@@ -1093,7 +1093,7 @@
                                 <OutArgument x:TypeArguments="x:String">[tituloCorreo]</OutArgument>
                               </ui:AssignOperation.To>
                               <ui:AssignOperation.Value>
-                                <InArgument x:TypeArguments="x:String">Capturas y datos ORIP</InArgument>
+                                <InArgument x:TypeArguments="x:String">["Consulta Estado Tramites"]</InArgument>
                               </ui:AssignOperation.Value>
                             </ui:AssignOperation>
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
@@ -1101,7 +1101,7 @@
                                 <OutArgument x:TypeArguments="x:String">[cuerpoCorreo]</OutArgument>
                               </ui:AssignOperation.To>
                               <ui:AssignOperation.Value>
-                                <InArgument x:TypeArguments="x:String">Se envia lalala</InArgument>
+                                <InArgument x:TypeArguments="x:String">["Buen día, \n "+"Se informa que la consulta de estados del trámite del proceso ha finalizado, a continuación, se adjunta la documentación extraída."]</InArgument>
                               </ui:AssignOperation.Value>
                             </ui:AssignOperation>
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
