@@ -169,7 +169,7 @@
               </Assign.Value>
             </Assign>
             <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1331,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[ruta2]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="1331,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False" Path="[ruta+&quot;INFORMACION.xlsx&quot;]" />
+            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[ruta2]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="1331,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[ruta+&quot;INFORMACION.xlsx&quot;]" />
             <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1331,13015" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[ruta2+&quot;INFORMACION.xlsx&quot;]">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
@@ -731,7 +731,7 @@
                                       </Assign>
                                     </If.Else>
                                   </If>
-                                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope CREAR CARPETA" sap:VirtualizedContainerService.HintSize="876,1108" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[ruta+&quot;INFORMACION.xlsx&quot;]">
+                                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope CREAR CARPETA" sap:VirtualizedContainerService.HintSize="876,1108" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[ruta2+&quot;INFORMACION.xlsx&quot;]">
                                     <ui:ExcelApplicationScope.Body>
                                       <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                         <ActivityAction.Argument>
