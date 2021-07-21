@@ -157,20 +157,20 @@
                 </Assign>
               </If.Else>
             </If>
-            <Assign sap:VirtualizedContainerService.HintSize="1331,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+            <Assign DisplayName="Assign ruta donde esta el 1er" sap:VirtualizedContainerService.HintSize="1331,60" sap2010:WorkflowViewState.IdRef="Assign_15">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[ruta]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">["C:\Users\PRUEBAS RPA\OneDrive - Tessi\DOCUMENTOS ROBOTS\ORIP\"]</InArgument>
+                <InArgument x:TypeArguments="x:String">["C:\Users\jparra\OneDrive\RPA\ORIP\"]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="1331,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+            <Assign DisplayName="Assign ruta donde esta el 2do" sap:VirtualizedContainerService.HintSize="1331,60" sap2010:WorkflowViewState.IdRef="Assign_19">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[ruta2]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">["C:\Users\PRUEBAS RPA\OneDrive\DOCUMENTOS ROBOTS\ORIP\"]</InArgument>
+                <InArgument x:TypeArguments="x:String">["C:\Users\jparra\OneDrive\RPA\ORIP\DocCopia\"]</InArgument>
               </Assign.Value>
             </Assign>
             <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1331,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
