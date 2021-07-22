@@ -146,7 +146,7 @@
                     <OutArgument x:TypeArguments="x:String">[hora2]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">PMMM5</InArgument>
+                    <InArgument x:TypeArguments="x:String">PM</InArgument>
                   </Assign.Value>
                 </Assign>
               </If.Then>
