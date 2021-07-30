@@ -88,6 +88,7 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>BalaReva.Excel</AssemblyReference>
       <AssemblyReference>BalaReva.Excel.Base</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="376,304" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -102,14 +103,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;PROGRAMA ORIP INICIADO&quot;]" />
-    <Delay Duration="02:30:00" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="1583,14216" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="http://190.145.190.151:7010/Portal/EstadoTramiteCiud/">
+    <Delay Duration="00:10:00" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="http://190.145.190.151:7010/Portal/EstadoTramiteCiud/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1549,14115" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1549,15528" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="hora" />
               <Variable x:TypeArguments="x:String" Name="ruta" />
@@ -122,6 +123,7 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Assign sap:VirtualizedContainerService.HintSize="1507,60" sap2010:WorkflowViewState.IdRef="Assign_14">
@@ -215,13 +217,13 @@
             </ui:ExcelApplicationScope>
             <ui:ExcelCloseWorkbook DisplayName="Close Workbook" sap:VirtualizedContainerService.HintSize="1507,59" sap2010:WorkflowViewState.IdRef="ExcelCloseWorkbook_1" Workbook="[excelOrip1]" />
             <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="1507,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1507,11403" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Workbook="[excelOrip2]" WorkbookPath="[ruta2+&quot;ORIP.xlsm&quot;]">
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1507,12717" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Workbook="[excelOrip2]" WorkbookPath="[ruta2+&quot;ORIP.xlsm&quot;]">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1473,11294" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1473,12608" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="datatable" />
                       <Variable x:TypeArguments="x:String" Name="TURNO" />
@@ -257,7 +259,7 @@
                         <InArgument x:TypeArguments="x:Int32">1</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtCorreoFiltro]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1431,51" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtCorreoFiltro]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1431,984" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
@@ -297,18 +299,18 @@
                       </ui:ForEachRow.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEachRow>
-                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtCorreoFiltro]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1431,8749" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtCorreoFiltro]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1431,9130" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1381,8602" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1381,8983" sap2010:WorkflowViewState.IdRef="Sequence_1">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:Boolean" Name="consulta" />
                               <Variable x:TypeArguments="x:String" Name="entidad" />
@@ -371,9 +373,9 @@
                                 <InArgument x:TypeArguments="x:String">NO</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <If Condition="[String.IsNullOrEmpty(CIUDAD)]" sap:VirtualizedContainerService.HintSize="1339,898" sap2010:WorkflowViewState.IdRef="If_23">
+                            <If Condition="[String.IsNullOrEmpty(CIUDAD)]" sap:VirtualizedContainerService.HintSize="1339,1025" sap2010:WorkflowViewState.IdRef="If_23">
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,722" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,849" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -391,6 +393,7 @@
                                   <ui:ExcelWriteCell Cell="[&quot;A&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="ERRORES" Text="[procesoH1]" />
                                   <ui:ExcelWriteCell Cell="[&quot;C&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_12" SheetName="ERRORES" Text="[TURNO]" />
                                   <ui:ExcelWriteCell Cell="[&quot;D&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="ERRORES" Text="[correoUnico]" />
+                                  <ui:ExcelWriteCell Cell="[&quot;E&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="ERRORES" Text="CIUDAD VACIA O INEXISTENTE" />
                                   <ui:Continue sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Continue_11" />
                                 </Sequence>
                               </If.Then>
@@ -467,7 +470,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:ForEach>
-                            <If Condition="[errorLog.Equals(&quot;SI&quot;)]" DisplayName="If LOG ERROR CIUDAD" sap:VirtualizedContainerService.HintSize="1339,898" sap2010:WorkflowViewState.IdRef="If_9">
+                            <If Condition="[errorLog.Equals(&quot;SI&quot;)]" DisplayName="If LOG ERROR CIUDAD" sap:VirtualizedContainerService.HintSize="1339,1025" sap2010:WorkflowViewState.IdRef="If_9">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -475,7 +478,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,722" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,849" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -493,11 +496,12 @@
                                   <ui:ExcelWriteCell Cell="[&quot;A&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="ERRORES" Text="[procesoH1]" />
                                   <ui:ExcelWriteCell Cell="[&quot;C&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="ERRORES" Text="[TURNO]" />
                                   <ui:ExcelWriteCell Cell="[&quot;D&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="ERRORES" Text="[correoUnico]" />
+                                  <ui:ExcelWriteCell Cell="[&quot;E&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="ERRORES" Text="CIUDAD NO REGISTRADA EN EL SIMIT" />
                                   <ui:Continue sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Continue_5" />
                                 </Sequence>
                               </If.Then>
                             </If>
-                            <If Condition="[String.IsNullOrEmpty(CIUDAD) Or String.IsNullOrEmpty(correoUnico) Or String.IsNullOrEmpty(TURNO)]" sap:VirtualizedContainerService.HintSize="1339,5283" sap2010:WorkflowViewState.IdRef="If_4">
+                            <If Condition="[String.IsNullOrEmpty(CIUDAD) Or String.IsNullOrEmpty(correoUnico) Or String.IsNullOrEmpty(TURNO)]" sap:VirtualizedContainerService.HintSize="1339,5410" sap2010:WorkflowViewState.IdRef="If_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -505,7 +509,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,722" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,849" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -524,11 +528,12 @@
                                   <ui:ExcelWriteCell Cell="[&quot;A&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="ERRORES" Text="[procesoH1]" />
                                   <ui:ExcelWriteCell Cell="[&quot;C&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="ERRORES" Text="[TURNO]" />
                                   <ui:ExcelWriteCell Cell="[&quot;D&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="ERRORES" Text="[correoUnico]" />
+                                  <ui:ExcelWriteCell Cell="[&quot;E&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_19" SheetName="ERRORES" Text="DATOS VACIOS O NULOS" />
                                   <ui:Continue sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Continue_9" />
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence sap:VirtualizedContainerService.HintSize="918,5126" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <Sequence sap:VirtualizedContainerService.HintSize="918,5253" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="sd:DataTable" Name="dtProcesos" />
                                     <Variable x:TypeArguments="sd:DataTable" Name="dtCorreoL" />
@@ -669,7 +674,7 @@
                                       </ui:Target>
                                     </ui:UiElementExists.Target>
                                   </ui:UiElementExists>
-                                  <If Condition="[valor]" DisplayName="If null" sap:VirtualizedContainerService.HintSize="876,960" sap2010:WorkflowViewState.IdRef="If_17">
+                                  <If Condition="[valor]" DisplayName="If null" sap:VirtualizedContainerService.HintSize="876,1087" sap2010:WorkflowViewState.IdRef="If_17">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -677,7 +682,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="376,784" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,911" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -695,6 +700,7 @@
                                         <ui:ExcelWriteCell Cell="[&quot;A&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="ERRORES" Text="[procesoH1]" />
                                         <ui:ExcelWriteCell Cell="[&quot;C&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="ERRORES" Text="[TURNO]" />
                                         <ui:ExcelWriteCell Cell="[&quot;D&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="ERRORES" Text="[correoUnico]" />
+                                        <ui:ExcelWriteCell Cell="[&quot;E&quot;+contador.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_20" SheetName="ERRORES" Text="TURNO INEXISTENTE AL MOMENTO DE LA CONSULTA" />
                                         <ui:RefreshBrowser Browser="{x:Null}" DisplayName="Refresh Browser" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="RefreshBrowser_1" />
                                         <ui:Continue sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Continue_7" />
                                       </Sequence>
@@ -1234,7 +1240,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExcelCloseWorkbook>
             <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="1507,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
-            <Sequence sap:VirtualizedContainerService.HintSize="1507,878" sap2010:WorkflowViewState.IdRef="Sequence_45">
+            <Sequence sap:VirtualizedContainerService.HintSize="1507,977" sap2010:WorkflowViewState.IdRef="Sequence_45">
               <Sequence.Variables>
                 <Variable x:TypeArguments="ui:WorkbookApplication" Name="excelFiltro" />
               </Sequence.Variables>
@@ -1295,19 +1301,20 @@
                 </ui:ExcelApplicationScope.Body>
               </ui:ExcelApplicationScope>
               <ui:ExcelCloseWorkbook DisplayName="Close Workbook" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="ExcelCloseWorkbook_3" Workbook="[excelFiltro]" />
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" WorkbookPath="[ruta+&quot;ORIP.xlsm&quot;]">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,387" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" WorkbookPath="[ruta+&quot;ORIP.xlsm&quot;]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,278" sap2010:WorkflowViewState.IdRef="Sequence_49">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:ExcelWriteRange AddHeaders="False" DataTable="[dtEnProceso]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_7" SheetName="DATOS" StartingCell="A2" />
+                      <ui:ExecuteMacro ContinueOnError="{x:Null}" MacroOutput="{x:Null}" DisplayName="Execute Macro" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExecuteMacro_10" MacroName="LimpiarEnProceso" />
                     </Sequence>
                   </ActivityAction>
                 </ui:ExcelApplicationScope.Body>
