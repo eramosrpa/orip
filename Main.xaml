@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1615,16056" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1257,827" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="47">
       <x:String>System.Activities</x:String>
@@ -51,7 +51,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="72">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -90,7 +90,7 @@
       <AssemblyReference>BalaReva.Excel.Base</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1625,15991" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap:VirtualizedContainerService.HintSize="376,304" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="contador" />
       <Variable x:TypeArguments="x:String" Name="nProceso" />
@@ -101,15 +101,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1583,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;PROGRAMA ORIP INICIADO&quot;]" />
-    <Delay Duration="00:00:00" sap:VirtualizedContainerService.HintSize="1583,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="1583,15738" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="http://190.145.190.151:7010/Portal/EstadoTramiteCiud/">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;PROGRAMA ORIP INICIADO&quot;]" />
+    <Delay Duration="01:16:00" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="http://190.145.190.151:7010/Portal/EstadoTramiteCiud/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1549,15637" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="hora" />
               <Variable x:TypeArguments="x:String" Name="ruta" />
@@ -123,7 +123,7 @@
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -143,7 +143,7 @@
                 <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("tt")]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[hora2.Equals(&quot;PM&quot;)]" sap:VirtualizedContainerService.HintSize="1507,217" sap2010:WorkflowViewState.IdRef="If_10">
+            <If Condition="[hora2.Equals(&quot;PM&quot;)]" sap:VirtualizedContainerService.HintSize="1507,218" sap2010:WorkflowViewState.IdRef="If_10">
               <If.Then>
                 <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_17">
                   <Assign.To>
@@ -170,7 +170,7 @@
                 <OutArgument x:TypeArguments="x:String">[ruta]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">C:\Users\jparra\OneDrive\RPA\ORIP\</InArgument>
+                <InArgument x:TypeArguments="x:String">["C:\Users\PRUEBAS RPA\OneDrive - Tessi\DOCUMENTOS ROBOTS\ORIP\"]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign DisplayName="Assign ruta donde esta el 2do" sap:VirtualizedContainerService.HintSize="1507,60" sap2010:WorkflowViewState.IdRef="Assign_19">
@@ -178,7 +178,7 @@
                 <OutArgument x:TypeArguments="x:String">[ruta2]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">C:\Users\jparra\OneDrive\RPA\ORIP\DocCopia\</InArgument>
+                <InArgument x:TypeArguments="x:String">["C:\Users\PRUEBAS RPA\OneDrive\DOCUMENTOS ROBOTS\DOCUMENTOS\ORIP\"]</InArgument>
               </Assign.Value>
             </Assign>
             <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1507,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
@@ -917,7 +917,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:GetValue>
-                                  <If Condition="[entregado = &quot; &quot;]" sap:VirtualizedContainerService.HintSize="876,374" sap2010:WorkflowViewState.IdRef="If_3">
+                                  <If Condition="[entregado = &quot; &quot; Or String.IsNullOrEmpty(entregado)]" sap:VirtualizedContainerService.HintSize="876,374" sap2010:WorkflowViewState.IdRef="If_3">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -959,9 +959,9 @@
                                       </Assign>
                                     </If.Else>
                                   </If>
-                                  <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="876,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[Screenshot]">
+                                  <ui:TakeScreenshot WaitBefore="{x:Null}" ContinueOnError="False" DisplayName="Take Screenshot 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="876,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[Screenshot]">
                                     <ui:TakeScreenshot.Target>
-                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c275ccd3-2131-414d-b1b7-17f57ce62179" InformativeScreenshot="ea7275c168fff7e877fa8a1a1efb3ea5" Selector="&lt;webctrl tag='BODY' /&gt;">
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c275ccd3-2131-414d-b1b7-17f57ce62179" InformativeScreenshot="3122e9457280fe355af1df58e50dc351">
                                         <ui:Target.TimeoutMS>
                                           <InArgument x:TypeArguments="x:Int32" />
                                         </ui:Target.TimeoutMS>
@@ -1235,7 +1235,7 @@
                                   </scg:List>
                                 </uascw:CompressFiles.ContentToArchive>
                               </uascw:CompressFiles>
-                              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Buen día, &lt;br&gt;&lt;br&gt; Se informa que la consulta de estados del trámite del proceso ha finalizado,&lt;br&gt; a continuación, se adjunta la documentación extraída.&#xA;&lt;br&gt;&#xA;Atentamente,&#xA; &lt;br&gt;&#xA;&lt;h3&gt;&lt;br&gt;RPA TESSI&lt;/b&gt;&lt;/h3&gt;&#xA;&lt;br&gt;&#xA;&#xA;&lt;h5&gt;PBX: (1) 841 8815 (Bogota)&lt;br&gt;&#xA;Transv. 93 No. 51-98 Int. 22&lt;br&gt;&#xA;Parque Empresarial Puerta del Sol&lt;br&gt;&#xA;Bogotá D.C., Colombia&lt;br&gt;&#xA;rpa@tessi.co&lt;br&gt;&#xA;www.tessi.co&lt;br&gt;&lt;/h5&gt;&#xA;&lt;h1&gt;tessi&lt;/h1&gt;&#xA;&lt;h6&gt;&#xA;Si usted desea expresar una petición, felicitación, queja o reclamo, por favor hágalo a través del correo atencionpqrs@tessi.co o a través de nuestra página www.tessi.co. Sus aportes enriquecen nuestro servicio.&lt;br&gt;&#xA; Antes de Imprimir este-mail, piense bien si es necesario hacerlo. Quizá no puedes salvar el planeta, pero sí puedes dejar de destruirlo. El medio ambiente es cosa de Todos.&lt;br&gt;&#xA;“Este correo electrónico y cualquier archivo(s) adjunto al mismo, contiene información de carácter confidencial exclusivamente dirigida a su destinatario(s). Si usted no es el destinatario indicado, queda notificado que la lectura, utilización, divulgación y/o copia sin autorización está prohibida en virtud de la legislación vigente. En el caso de haber recibido este correo electrónico por error, agradecemos informarnos inmediatamente de esta situación mediante el reenvío a la dirección electrónica del remitente. Las opiniones que contenga este mensaje son exclusivas de su autor y no necesariamente representan la opinión oficial del TESSI COLOMBIA SAS.”&lt;br&gt;&#xA; &lt;br&gt;&#xA;“This email and any file(s) attached to it contain confidential information that is exclusively addressed to its recipient(s). If you are not the indicated recipient, you are informed that reading, using, disseminating and/or copying it without authorization is forbidden in accordance with the legislation in effect. If you have received this email by mistake, please immediately notify the sender of the situation by resending it to their email address. The opinions contained in this message are solely those of the author and do not necessarily represent the official views of TESSI COLOMBIA SAS.”&lt;br&gt;&#xA;&lt;/h6&gt;&#xA;" DisplayName="Send SMTP Mail Message" Email="[emailcorreo]" EnableSSL="True" From="[emailcorreo]" sap:VirtualizedContainerService.HintSize="444,145" sap2010:WorkflowViewState.IdRef="SendMail_6" IsBodyHtml="True" Name="RPA TESSI" Password="[passwordcorreo]" Port="587" SecureConnection="Auto" Server="smtp.live.com" Subject="[tituloCorreo]" To="[correoFil]">
+                              <ui:SendMail Bcc="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Buen día, &lt;br&gt;&lt;br&gt; Se informa que la consulta de estados del trámite del proceso ha finalizado,&lt;br&gt; a continuación, se adjunta la documentación extraída.&#xA;&lt;br&gt;&#xA;Atentamente,&#xA; &lt;br&gt;&#xA;&lt;h3&gt;&lt;br&gt;RPA TESSI&lt;/b&gt;&lt;/h3&gt;&#xA;&lt;br&gt;&#xA;&#xA;&lt;h5&gt;PBX: (1) 841 8815 (Bogota)&lt;br&gt;&#xA;Transv. 93 No. 51-98 Int. 22&lt;br&gt;&#xA;Parque Empresarial Puerta del Sol&lt;br&gt;&#xA;Bogotá D.C., Colombia&lt;br&gt;&#xA;rpa@tessi.co&lt;br&gt;&#xA;www.tessi.co&lt;br&gt;&lt;/h5&gt;&#xA;&lt;h1&gt;tessi&lt;/h1&gt;&#xA;&lt;h6&gt;&#xA;Si usted desea expresar una petición, felicitación, queja o reclamo, por favor hágalo a través del correo atencionpqrs@tessi.co o a través de nuestra página www.tessi.co. Sus aportes enriquecen nuestro servicio.&lt;br&gt;&#xA; Antes de Imprimir este-mail, piense bien si es necesario hacerlo. Quizá no puedes salvar el planeta, pero sí puedes dejar de destruirlo. El medio ambiente es cosa de Todos.&lt;br&gt;&#xA;“Este correo electrónico y cualquier archivo(s) adjunto al mismo, contiene información de carácter confidencial exclusivamente dirigida a su destinatario(s). Si usted no es el destinatario indicado, queda notificado que la lectura, utilización, divulgación y/o copia sin autorización está prohibida en virtud de la legislación vigente. En el caso de haber recibido este correo electrónico por error, agradecemos informarnos inmediatamente de esta situación mediante el reenvío a la dirección electrónica del remitente. Las opiniones que contenga este mensaje son exclusivas de su autor y no necesariamente representan la opinión oficial del TESSI COLOMBIA SAS.”&lt;br&gt;&#xA; &lt;br&gt;&#xA;“This email and any file(s) attached to it contain confidential information that is exclusively addressed to its recipient(s). If you are not the indicated recipient, you are informed that reading, using, disseminating and/or copying it without authorization is forbidden in accordance with the legislation in effect. If you have received this email by mistake, please immediately notify the sender of the situation by resending it to their email address. The opinions contained in this message are solely those of the author and do not necessarily represent the official views of TESSI COLOMBIA SAS.”&lt;br&gt;&#xA;&lt;/h6&gt;&#xA;" Cc="[concopia]" DisplayName="Send SMTP Mail Message" Email="[emailcorreo]" EnableSSL="True" From="[emailcorreo]" sap:VirtualizedContainerService.HintSize="444,145" sap2010:WorkflowViewState.IdRef="SendMail_6" IsBodyHtml="True" Name="RPA TESSI" Password="[passwordcorreo]" Port="587" SecureConnection="Auto" Server="smtp.live.com" Subject="[tituloCorreo]" To="[correoFil]">
                                 <ui:SendMail.Files>
                                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                     <InArgument x:TypeArguments="x:String">[ruta+"\"+"Capturas"+"\"+hora+"\"+hora2+"\"+correoFil+" "+hora+" "+hora2+"\"+"INFORMACION"+".zip"]</InArgument>
@@ -1371,7 +1371,7 @@
       </ui:OpenBrowser.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
